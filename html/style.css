@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+#app {
+    background: transparent !important;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+#infos {
+    position: absolute;
+    top: 81.8%;
+    right: 73%;
+    width: 235px;
+}
+
+.info .container {
+    position: relative;
+    width: 235px;
+    height: 32px;
+    margin-bottom: 5px;
+    background: rgba(12, 15, 21, 0.83);
+    border: 2px solid rgba(12, 15, 21, 0.83);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.info .container .state {
+    position: absolute;
+    overflow: hidden;
+    width: 225px;
+    top: 5px;
+    left: 10px;
+    color: white;
+    font-size: 13px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000000;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+    font-size: 1.5vh
+}
+
+.progressbar-1 {
+    position: absolute;
+    left: 14.8%;
+    top: 95.5%;
+    width: 12.2vw;
+    right: 3vh;
+    background-color: rgba(12, 15, 21, 0.83);;
+    border-radius: 10px 10px 10px 10px;
+    border: 4px solid rgba(12, 15, 21, 0.83);
+}
+
+.pro-1 {
+    background-color: #5bd074;
+    width: 50%;
+    height: 1vh;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.pro-1 i {
+    position: relative;
+    right: 2vh;
+    top: -0.3vh;
+    border-radius: 10px;
+}
+
+.progressbar-2 {
+    position: absolute;
+    left: 14.8%;
+    top: 97.6%;
+    width: 12.2vw;
+    right: 3vh;
+    background-color: rgba(12, 15, 21, 0.83);;
+    border-radius: 10px 10px 10px 10px;
+    border: 4px solid rgba(12, 15, 21, 0.83);
+}
+
+.pro-2 {
+    background-color: #3fa6ebde;
+    width: 50%;
+    height: 1vh;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.pro-2 i {
+    position: relative;
+    right: 2vh;
+    top: -0.3vh;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="ui">
+    <div class="progressbar-1">
+        <div class="pro-1">
+        </div>
+    </div>
+    <div class="progressbar-2">
+        <div class="pro-2">
+        </div>
+    </div>
+    <div id="infos">
+        <div class="info">
+            <div class="container">
+                <span class="state" id="onebar"></span>
+                <div class="bar" id="onebar"></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <span class="state" id="twobar"></span>
+                <div class="bar" id="twobar"></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <span class='state' id="threebar"></span>
+                <div class="bar" id="threebar"></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <span class="state" id="fourbar"></span>
+                <div class="bar" id="fourbar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        window.addEventListener('message', function (event) {
+            var data = event.data;
+
+            if (data.action === "hideUi") {
+                if (data.value === true) {
+                    $("#ui").hide(500);
+                } else {
+                    $("#ui").show(500);
+                }
+            } else if (data.action === "setInfos") {
+                $.each(data.infos, function (index, value) {
+                    $(".info .container #" + value.name + ".state").fadeTo(0, 0, function () {
+                        $(".info .container #" + value.name + ".state").html(value.value);
+                        $(".info .container #" + value.name + ".state").fadeTo(0, 1);
+                    });
+                })
+            }
+        })
+    })
+</script>
+<script>
+    window.addEventListener('message', function (event) {
+        switch (event.data.action) {
+            case 'update':
+                $('.pro-1').css('width', event.data.hunger + '%')
+                $('.pro-2').css('width', event.data.thirst + '%')
+                break;
+        }
+    })
+</script>
+</body>
