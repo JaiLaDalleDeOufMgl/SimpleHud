@@ -12,10 +12,6 @@ files {
 ui_page 'html/index.html',
 
 client_scripts {
-    'skin.lua',
-    'exemple.lua',
-}
-
-escrow_ignore {
-    'exemple.lua',
+    'hud.lua',
+    'hud_config.lua',
 }
